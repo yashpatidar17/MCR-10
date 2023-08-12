@@ -1,0 +1,9 @@
+.product{
+    height: 300px;
+    width: 400px;
+}
+
+.product-con{
+    margin-left:30px;
+    font-weight: bold;
+}

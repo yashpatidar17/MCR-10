@@ -1,0 +1,31 @@
+.Dash-container{
+    display:flex;
+    flex-direction:row;
+    background-color: white; 
+    width: 100%;
+    justify-content: space-around;
+}
+
+.info-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    border: 1px solid black;
+    height: 150px;
+    padding: 10px;
+    width: 200px;
+    background-color:rgb(217, 217, 217);
+    border-radius: 10px;
+}
+
+.stock{
+    color: green;
+}
+
+.del{
+    color:rgb(255, 196, 0);
+}
+
+.low{
+    color:red;
+}

@@ -1,0 +1,25 @@
+.sidebar {
+    min-width: 220px;
+    background-color: #242424;
+    padding: 10px;
+    height: 100vh;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar-Link{
+    text-decoration: none;
+    color: white;
+  }
+  .sidebar li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+  }
+  .list-unit{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
