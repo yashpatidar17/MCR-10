@@ -4,7 +4,7 @@ import "./products.css";
 import { Link } from "react-router-dom";
 
 export const Products = () => {
-  const {setDepartment, setLow, setName,newSortedData } = useContext(DataContext);
+  const {setDepartment, setLow, setName,newSortedData,department } = useContext(DataContext);
   const departmentHandler = (event)=>{
     setDepartment(event.target.value);
   }
@@ -18,7 +18,7 @@ export const Products = () => {
     <div>
       <div className="filters">
         <h2>Products</h2>
-        <select onChange={(e)=>departmentHandler(e)}>
+        <select onChange={(e)=>departmentHandler(e)} value={department}>
           <option value="All">All Departments</option>
           <option value="Kitchen">Kitchen</option>
           <option value="Clothing">Clothing</option>

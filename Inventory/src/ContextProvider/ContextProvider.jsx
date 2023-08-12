@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { inventoryData } from "../Data/inventory";
+import { useNavigate } from "react-router-dom";
 
 export const DataContext = createContext();
 
@@ -8,7 +9,14 @@ export const ContextProvider = ({ children }) => {
   const [department, setDepartment] = useState("");
   const [low, setLow] = useState("");
   const [name, setName] = useState("");
+  const [depa,setDepa] = useState("");
+  const navigate= useNavigate();
   console.log(department);
+
+  const buttonDepartHandler = (valueRc)=>{
+    setDepartment(valueRc);
+    navigate("/products")
+}
 
   const sortedData = () => {
     const newData = [...data];
@@ -34,15 +42,17 @@ export const ContextProvider = ({ children }) => {
     if(low === "low"){
       return newData.filter((item)=> item.stock<=10)
     }
-    
+
     return newData;
   };
+
+  
 
   const newSortedData = sortedData();
   return (
     <div>
       <DataContext.Provider
-        value={{ data, setDepartment, setLow, setName, newSortedData }}
+        value={{ data, setDepartment, setLow, setName, newSortedData,buttonDepartHandler,department }}
       >
         {children}
       </DataContext.Provider>

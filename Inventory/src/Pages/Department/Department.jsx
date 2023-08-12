@@ -1,15 +1,15 @@
+import { useContext } from "react";
+import "./department.css";
+import { DataContext } from "../../ContextProvider/ContextProvider";
+
 export const Department = () =>{
+
+    const {buttonDepartHandler} = useContext(DataContext);
     return(
         <div className="Dash-container">
-        <div className="info-container">
-            <h2>Kitchen</h2>
-        </div>
-        <div className="info-container">
-            <h2>Clothing</h2>
-        </div>
-        <div className="info-container">
-            <h2>Toys</h2>
-        </div>
+        <button className="depart-button" onClick={()=>buttonDepartHandler("Kitchen")}>Kitchen</button>
+        <button className="depart-button" onClick={()=>buttonDepartHandler("Clothing")}>Clothing</button>
+        <button className="depart-button" onClick={()=>buttonDepartHandler("Toys")}>Toys</button>
     </div>
     )
 }

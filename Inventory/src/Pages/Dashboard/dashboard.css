@@ -4,6 +4,7 @@
     background-color: white; 
     width: 100%;
     justify-content: space-around;
+    margin-top: 30px;
 }
 
 .info-container{
@@ -20,12 +21,19 @@
 
 .stock{
     color: green;
+    margin: auto;
 }
 
 .del{
     color:rgb(255, 196, 0);
+    margin: auto;
 }
 
 .low{
     color:red;
+    margin: auto;
+}
+
+.text{
+    margin: auto;
 }

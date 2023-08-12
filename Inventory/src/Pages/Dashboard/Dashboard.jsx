@@ -15,15 +15,15 @@ export const Dashboard = () =>{
         <div className="Dash-container">
             <div className="info-container">
                 <h1 className="stock">{stockCount}</h1>
-                <h2>Total Stock</h2>
+                <h2 className="text">Total Stock</h2>
             </div>
             <div className="info-container">
                 <h1 className="del">{delivered}</h1>
-                <h2>Total Delivered</h2>
+                <h2 className="text">Total Delivered</h2>
             </div>
             <div className="info-container">
                 <h1 className="low">{lowStock.length}</h1>
-                <h2>Low Stock Items</h2>
+                <h2 className="text">Low Stock Items</h2>
             </div>
         </div>
     )
