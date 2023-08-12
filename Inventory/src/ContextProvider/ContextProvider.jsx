@@ -30,6 +30,11 @@ export const ContextProvider = ({ children }) => {
     } else if (name === "stock") {
       return newData.sort((a, b) => b.stock - a.stock);
     }
+
+    if(low === "low"){
+      return newData.filter((item)=> item.stock<=10)
+    }
+    
     return newData;
   };
 

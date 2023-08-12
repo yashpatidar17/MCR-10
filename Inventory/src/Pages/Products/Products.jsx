@@ -11,6 +11,9 @@ export const Products = () => {
   const nameHandler = (event)=>{
     setName(event.target.value);
   }
+  const lowHandler = (event)=>{
+    setLow(event.target.value);
+  }
   return (
     <div>
       <div className="filters">
@@ -22,8 +25,8 @@ export const Products = () => {
           <option value="Toys">Toys</option>
         </select>
 
-        <label>
-            <input type="checkbox"/>
+        <label >
+            <input onChange={(e)=>lowHandler(e)} type="checkbox" value="low"/>
             Low Stock Items
         </label>
         <select onChange={(e)=>nameHandler(e)}>
@@ -31,10 +34,13 @@ export const Products = () => {
           <option value="price">Price</option>
           <option value="stock">Stock</option>
         </select>
+        <button className="newButton">
+          New
+        </button>
       </div>
       <table className="products-table">
         <thead>
-          <tr>
+          <tr className="table-tr">
             <th>Image</th>
             <th>Name</th>
             <th>Description</th>
@@ -53,7 +59,7 @@ export const Products = () => {
                   alt="Product"
                 />
               </td>
-              <Link to={`/product/${item.id}`}>
+              <Link className="link-class" to={`/product/${item.id}`}>
                 <td className="name">{item.name}</td>
               </Link>
 

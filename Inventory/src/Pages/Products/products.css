@@ -34,6 +34,24 @@
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    margin: 0 10px;
+    margin: 15px 10px;
     align-items: center;
+  }
+
+  .link-class{
+    display: flex;
+    margin-top:40px;
+    align-items: center;
+  }
+
+  .newButton{
+    padding:7px;
+    background-color: rgb(90, 211, 235);
+    border-radius: 5px;
+  }
+
+  .table-tr{
+    background-color: antiquewhite;
+    height: 20px;
+    padding: 0 10px;
   }
